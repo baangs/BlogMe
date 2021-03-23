@@ -1,0 +1,208 @@
+/*
+Primary
+- Light red (CTA text): hsl(356, 100%, 66%)
+- Very light red (CTA hover background): hsl(355, 100%, 74%)
+- Very dark blue (headings): hsl(208, 49%, 24%)
+
+Neutral
+- White (text): hsl(0, 0%, 100%)
+- Grayish blue (footer text): hsl(240, 2%, 79%)
+- Very dark grayish blue (body copy): hsl(207, 13%, 34%)
+- Very dark black blue (footer background): hsl(240, 10%, 16%)
+
+### Gradient
+
+Background gradient - Intro/CTA mobile nav:
+- Very light red: hsl(13, 100%, 72%)
+- Light red: hsl(353, 100%, 62%)
+
+Background gradient - body:
+- Very dark gray blue: hsl(237, 17%, 21%)
+- Very dark desaturated blue: hsl(237, 23%, 32%)
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap');
+
+
+:root {
+    --primary-color-light-red: hsl(356, 100%, 66%);
+    --primary-color-verylight-red: hsl(355, 100%, 74%);
+    --primary-color-black-blue: hsl(240, 10%, 16%);
+
+    --neutral-color-white: hsl(0, 0%, 100%);
+    --neutral-color-grayblue: hsl(207, 13%, 34%);
+    --neutral-color-blackblue: hsl(240, 10%, 16%);
+
+    /*Gradient*/
+    --background-intro-color-very-light-red: hsl(13, 100%, 72%);
+    --background-intro-color-light-red: hsl(353, 100%, 62%);
+
+    --background-body-color-darkgray-blue: hsl(237, 17%, 21%);
+    --background-body-color-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Overpass', 'Ubuntu', sans-serif ;
+    line-height: 1.6;
+}
+
+
+.logo {
+    position: relative;
+    left: 70px;
+    cursor: pointer;
+    padding-top: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    color: var(--neutral-color-white);
+}
+
+.title h2 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 10px 0;
+    color: var(--background-body-color-desaturated-blue);
+}
+
+.service h3 {
+    color: var(--background-body-color-desaturated-blue);
+}
+
+p {
+    margin: 10px 0;
+    color: var(--background-intro-color-light-red);
+}
+
+.thatBlue {
+    color: var(--neutral-color-grayblue);
+}
+
+.headingp {
+    color: var(--neutral-color-white);
+}
+
+.navbar {
+    height: 500px;
+    background-image: linear-gradient(to right, var(--background-intro-color-very-light-red), var(--background-intro-color-light-red));
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+.navigation {
+    max-width: 2700px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 25%;
+}
+
+.registration {
+    display: flex;
+    padding-top: 50px;
+    margin: 0 70px;
+}
+
+.registration li {
+    list-style-type: none;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--neutral-color-white);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.icons {
+    padding-left: 2px;
+}
+
+.tab {
+    transform: translateX(65%);
+    position: absolute;
+    padding-top: 45px;
+}
+
+.intro-img {
+    position: absolute;
+    top: -250px;
+
+    left: 150px;
+    width: 100%;
+    transform: scale(1.4);
+}
+
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-2 {
+    background-color: var(--neutral-color-white);
+    border: none;
+    color: var(--primary-color-light-red);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px 12px 12px 12px;
+    text-align: center;
+    transition-duration: 0.4s;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.btn-3 {
+    background-color: var(--neutral-color-white);
+    border: none;
+    color: var(--background-intro-color-light-red);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    transition-duration: 0.4s;
+    border-radius: 20px;
+    display: inline;
+    font-size: 16px;
+}
+
+.btn-2:hover {
+    background-color: var(--background-intro-color-very-light-red);
+    color: var(--neutral-color-white);
+}
+
+.btn-3:hover {
+    background-color: var(--primary-color-verylight-red);
+    color: var(--neutral-color-white);
+}
+
+
+
